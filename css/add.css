@@ -1,0 +1,21 @@
+body{
+	font-size:12px;
+	font-family: "微软雅黑";
+}
+.navTopCs{
+	padding:5px;
+	text-align:right;
+	margin-bottom:5px;
+}
+.a-gray{
+	margin-right: 10px;
+	color:#7F8C8D;
+	line-height:20px;
+}
+.a-gray:hover{
+	color:black;
+	text-decoration: none;
+}
+.addTabCs{
+	padding-top:15px;
+}
