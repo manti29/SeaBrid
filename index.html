@@ -41,6 +41,24 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-xs-10">
+                                            <div class="input-group">
+                                                <label for="code" class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-text-background"></span>
+                                                </label>
+                                                <input type="text" id="code" class="form-control" placeholder="验证码：">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <div class="form-control-static">
+                                                <a href="#"><img src="img/code.png" height="20" alt="点击可以更换" title="点击可以更换" /></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--
+                                <div class="form-group">
                                     <div class="input-group">
                                         <label for="code" class="input-group-addon">
                                             <span class="glyphicon glyphicon-text-background"></span>
@@ -51,6 +69,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                -->
                             </div>
                             <button type="submit" class="btn btn-lg btn-block btn-success">登录</button>
                         </form>
@@ -103,6 +122,7 @@
                                         </span>
                                     </div>
                                 </div>
+                                <!--
                                 <div class="form-group">
                                     <div class="input-group">
                                         <label for="code" class="input-group-addon">
@@ -121,6 +141,7 @@
                                         </label>                                          
                                     </div>
                                 </div>
+                                -->
                             </div>
                             <button type="submit" class="btn btn-lg btn-block btn-primary">注册</button>
                         </form>
@@ -132,60 +153,63 @@
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <!-- 本地最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="js/bootstrap.js"></script>
-        
+
         <script>
-            var inputEle=$('input[type="text"]');
-            var submitBtn=$('button[type="submit"]');
-            var btnMesCode=$("#btnMesCode");
-            var agreeCheck=$("#agreeCheck");
-            $(inputEle).change(function(){
-                var obj=event.target;
+            var inputEle = $('input[type="text"]');
+            var submitBtn = $('button[type="submit"]');
+            var btnMesCode = $("#btnMesCode");
+            var agreeCheck = $("#agreeCheck");
+            $(inputEle).change(function() {
+                var obj = event.target;
                 checkForm(obj);
             });
             //提交按钮
-            $(submitBtn).click(function(){
-                var btnParent=$(this).parent();
-                var inputElements=btnParent.find('input[type="text"]');
-                console.log(btnParent+":"+inputElements.length);
-                var flag=checkForm(btnParent,inputElements.length);
-                if(inputElements.length===flag){
+            $(submitBtn).click(function() {
+                var btnParent = $(this).parent();
+                var inputElements = btnParent.find('input[type="text"]');
+                console.log(btnParent + ":" + inputElements.length);
+                var flag = checkForm(btnParent, inputElements.length);
+                if (inputElements.length === flag) {
                     return true;
                 }
             });
             //获取验证码
-            btnMesCode.click(function(){
-               var timer=obj=null,t=60;
-               obj=this;
-               $(obj).text(t+' s').attr("disabled",true);
-               timer=setInterval(function(){
-                   t--;
-                   if(t<=0){
-                       clearInterval(timer);
-                       $(obj).text('获取短信验证码').removeAttr("disabled");
-                   }else{
-                       $(obj).text(t+' s');
-                   }                   
-               },100);
-            })
-            //同意协议注册
-            agreeCheck.change(function(){
-                if(!this.checked){
-                    $(submitBtn).eq(1).attr("disabled",true);
-                }else{
-                    $(submitBtn).eq(1).attr("disabled",false);
+            btnMesCode.click(function() {
+                    var timer = obj = null,
+                        t = 60;
+                    obj = this;
+                    $(obj).text(t + ' s').attr("disabled", true);
+                    timer = setInterval(function() {
+                        t--;
+                        if (t <= 0) {
+                            clearInterval(timer);
+                            $(obj).text('获取短信验证码').removeAttr("disabled");
+                        } else {
+                            $(obj).text(t + ' s');
+                        }
+                    }, 100);
+                })
+                //同意协议注册
+            agreeCheck.change(function() {
+                if (!this.checked) {
+                    $(submitBtn).eq(1).attr("disabled", true);
+                } else {
+                    $(submitBtn).eq(1).attr("disabled", false);
                 }
             })
-            function checkForm(obj){
-                var success="has-success has-feedback";
-                var successSpan='<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>';
-                var err="has-error has-feedback";
-                var errSpan='<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>';
-                addDomNotice(obj,success,successSpan);
+
+            function checkForm(obj) {
+                var success = "has-success has-feedback";
+                var successSpan = '<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>';
+                var err = "has-error has-feedback";
+                var errSpan = '<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>';
+                addDomNotice(obj, success, successSpan);
             }
-            function addDomNotice(obj,cssName,spanPart){
-                var objParent=$(obj).parent().parent();
+            //增加检验样式
+            function addDomNotice(obj, cssName, spanPart) {
+                var objParent = $(obj).parent().parent();
                 objParent.addClass(cssName);
-                $(spanPart).appendTo($(obj));
+                objParent.append($(spanPart));
             }
         </script>
     </body>
