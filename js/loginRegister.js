@@ -30,7 +30,7 @@ $(function() {
     //验证码检验
     $("#code").on('change',function(){
         
-    })
+    });
     //获取验证码
     $('#btnMesCode').click(function() {
         var timer = obj = null,
@@ -63,15 +63,15 @@ $(function() {
         };
         addCheckoutCss(obj, notice.nowItemCss);
         return flag;
-    }
+    };
     //添加检验样式
     function addCheckoutCss(obj, className) {
         obj.addClass(className);
-    }
+    };
     //去除检验样式
     function removeCheckoutCss(obj, className) {
         obj.removeClass(className);
-    }
+    };
     //注册提交页面
     $("#loginSubmit").on('click', function() {
         if (notice.loginUserName && notice.loginCode) {

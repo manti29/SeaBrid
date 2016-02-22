@@ -30,60 +30,63 @@
         </div>
         <!-- 显示贷款例表区  -->
         <div class="container">
-            <div class="row">
+            <div class="row addRowCs">
                 <div class="col-sm-2 text-right">
-                    <span>可贷额度</span>
+                    <span class="addSpanCs">可贷额度</span>
                 </div>
                 <div class="col-sm-3">
-                    <span>100000.00￥</span>
+                    <span>￥100000.00</span>
                 </div>
             </div>
-            <div class="row">
+            <div class="row addRowCs">
                 <div class="col-sm-2 text-right">
-                    <span>贷款选项</span>
+                    <span class="addSpanCs">贷款选项</span>
                 </div>
-                <div class="col-sm-9">
-                    <a type="button" class="btn btn-warning" href="#">
+                <div class="col-sm-9" id="loanBtnGroup">
+                    <button type="button" class="btn btn-warning">
                                                 期限：3个月
                         <br/> 方式：一次性还本付息
                         <br/> 利率：10.2%
                         <br/>
-                    </a>
-                    <a type="button" class="btn btn-default" href="#">
+                    </button>
+                    <button type="button" class="btn btn-default">
                                                 期限：180天
                         <br/> 方式：随借随还
                         <br/> 利率：16.8%
                         <br/>
-                    </a>
+                    </button>
                 </div>
             </div>
             <form class="form-horizontal">
                 <div class="form-group">
                     <label class="col-sm-2 control-label">期限</label>
-                    <select class="form-control">
+                    <select class="form-control" id="deadline" name="deadline">
                         <option>3个月</option>
                         <option>180天</option>
                     </select>
                     <label class="col-sm-2 control-label">方式</label>
-                    <select class="form-control">
+                    <select class="form-control" id="manner" name="manner">
                         <option>一次性还本付息</option>
                         <option>随借随还</option>
                     </select>
                     <label class="col-sm-2 control-label">利率</label>
-                    <select class="form-control">
+                    <select class="form-control" id="rate" name="rate">
                         <option>10.2%</option>
                         <option>16.8%</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="amountEntered" class="col-sm-2 control-label">申请贷款额度</label>
-                    <div class="col-sm-4">
-                        <input type="password" class="form-control" id="amountEntered" placeholder="输入金额">
+                    <div class="col-sm-3">
+                        <div class="input-group has-warning">
+                            <label for="amountEntered" class="input-group-addon" id="basic-addon1">￥</label>
+                            <input type="text" id="amountEntered" class="form-control" placeholder="输入金额">
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-offset-2">
-                        <input type="checkbox"> 同意签订
+                    <label class="col-sm-offset-2 col-sm-10">
+                        <input type="checkbox" checked="true" id="checkoutBtn"> 同意签订
                         <a href="#">《国美小贷借款合同1》</a>
                         <a href="#">《国美小贷借款合同2》</a>
                         <a href="#">《国美小贷借款合同3》</a>
@@ -92,7 +95,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-lg-offset-2 col-sm-4">
-                        <button type="button" class="btn btn-danger">立即申请贷款</button>
+                        <button type="submit" id="submitBtn" type="button" class="btn btn-danger">立即申请贷款</button>
                     </div>
                 </div>
             </form>
@@ -103,6 +106,8 @@
         <script src="js/bootstrap.js"></script>
         <!-- 登陆注册 -->
         <script src="js/loginRegister.js"></script>
+        <!-- -->
+        <script src="js/applyForLoan.js" ></script>
     </body>
 
 </html>

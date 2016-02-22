@@ -7,6 +7,9 @@ body{
 .addBtnCs{
     margin-top: 30px;
 }
-h1.addH1Cs{
-    color:#d9534f;
+.addSpanCs{
+    font-weight: bold;
+}
+.addRowCs{
+    margin-bottom:20px;
 }
