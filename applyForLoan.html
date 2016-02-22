@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>信云贷申请贷款</title>
+        <!-- 本地 Bootstrap 核心 CSS 文件 -->
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/add.css" />
+    </head>
+
+    <body>
+        <!--　导航条　-->
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <span class="navbar-text">信云贷贷款</span>
+                </div>
+                <span class="navbar-text navbar-right">客服电话：400-600-8888</span>
+            </div>
+        </nav>
+        <!-- 路径区 -->
+        <div class="container">
+            <div class="row">
+                <ol class="breadcrumb">
+                    <li><a href="#">首页</a></li>
+                    <li class="active">申请贷款</li>
+                </ol>
+            </div>
+        </div>
+        <!-- 显示贷款例表区  -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2 text-right">
+                    <span>可贷额度</span>
+                </div>
+                <div class="col-sm-3">
+                    <span>100000.00￥</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 text-right">
+                    <span>贷款选项</span>
+                </div>
+                <div class="col-sm-9">
+                    <a type="button" class="btn btn-warning" href="#">
+                                                期限：3个月
+                        <br/> 方式：一次性还本付息
+                        <br/> 利率：10.2%
+                        <br/>
+                    </a>
+                    <a type="button" class="btn btn-default" href="#">
+                                                期限：180天
+                        <br/> 方式：随借随还
+                        <br/> 利率：16.8%
+                        <br/>
+                    </a>
+                </div>
+            </div>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">期限</label>
+                    <select class="form-control">
+                        <option>3个月</option>
+                        <option>180天</option>
+                    </select>
+                    <label class="col-sm-2 control-label">方式</label>
+                    <select class="form-control">
+                        <option>一次性还本付息</option>
+                        <option>随借随还</option>
+                    </select>
+                    <label class="col-sm-2 control-label">利率</label>
+                    <select class="form-control">
+                        <option>10.2%</option>
+                        <option>16.8%</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="amountEntered" class="col-sm-2 control-label">申请贷款额度</label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" id="amountEntered" placeholder="输入金额">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-offset-2">
+                        <input type="checkbox"> 同意签订
+                        <a href="#">《国美小贷借款合同1》</a>
+                        <a href="#">《国美小贷借款合同2》</a>
+                        <a href="#">《国美小贷借款合同3》</a>
+                        <a href="#">《国美小贷借款合同4》</a>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-offset-2 col-sm-4">
+                        <button type="button" class="btn btn-danger">立即申请贷款</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- 本地jQuery文件。务必在bootstrap.min.js 之前引入 -->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <!-- 本地最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="js/bootstrap.js"></script>
+        <!-- 登陆注册 -->
+        <script src="js/loginRegister.js"></script>
+    </body>
+
+</html>
