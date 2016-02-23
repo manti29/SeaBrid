@@ -19,6 +19,22 @@
         <script src="js/bootstrap.js"></script>
         <!-- 登陆注册 -->
         <script src="js/loginRegister.js" ></script>
+        <script>
+            $(function(){
+                var promise=$.ajax({
+                    url:"data.php",
+                    dataType:"json",
+                    success:function(data,txtStatus){
+                       $.each(data, function(index,ele) {
+                           console.log(index+":"+ele);
+                       });
+                    },
+                    error:function(a,b,c){
+                        console.log(a.readyState+":"+b+":"+c)
+                    }
+                })
+            })
+        </script>
     </body>
-
+    
 </html>
