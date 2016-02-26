@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>$!page_title</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta name="_csrf" content="${_csrf.token}"/>
+    <meta name="_csrf_header" content="${_csrf.headerName}"/>
+    <meta name="_context_url" content="$request.getContextPath()"/>
+    $!meta
+    <link rel="stylesheet" href="$request.getContextPath()/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="$request.getContextPath()/static/css/bootstrap-theme.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="$request.getContextPath()/static/js/html5shiv.min.js"></script>
+    <script src="$request.getContextPath()/static/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Switch -->
+    <link rel="stylesheet" href="$request.getContextPath()/static/css/switch.css">
+    <!-- DatetimePicker -->
+    <link rel="stylesheet" href="$request.getContextPath()/static/css/datetimepicker.min.css">
+    <link rel="stylesheet" href="$request.getContextPath()/static/css/rock-core.css">
+    $!style
+</head>
+<body>
+<div class="content">
+    <div id="top" class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-nav-items">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="$request.getContextPath()/">Rock Framework</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="top-nav-items">
+                <ul class="nav navbar-nav">
+                    <li name="link-1">#link("$request.getContextPath()/" "" "首页")</li>
+                    <li name="link-2">#link("$request.getContextPath()/demo/web_components/" "" "前端组件")</li>
+                    <li name="link-3">#link("$request.getContextPath()/static/doc/download.html" "" "下载")</li>
+                    <li name="link-4">#link("$request.getContextPath()/static/doc/index.html" "" "文档")</li>
+                    <li name="link-5"><a href="http://10.12.12.129:7777/browse/ROCK/" target="_blank">JIRA</a></li>
+                    <li name="link-6" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">REST演示 <span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>#link("$request.getContextPath()/demo/query_resource/" "" "查询资源")</li>
+                            <li>#link("$request.getContextPath()/demo/create_resource/" "" "新建资源")</li>
+                            <li>#link("$request.getContextPath()/demo/email/" "" "发送邮件")</li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="搜索">
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-default">
+                      <i class="glyphicon glyphicon-search"></i>
+                  </button>
+                </span>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="$request.getContextPath()/admin/" title="系统管理" target="_blank">系统管理</a></li>
+                    <li><a>|</a></li>
+                    #if($_user)
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">$_username <span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a class="navbar-link" href="$request.getContextPath()/account/profile/$_user.getUsername()/">修改资料</a></li>
+                            <li><a class="navbar-link" href="$request.getContextPath()/account/password_change/">修改密码</a></li>
+                            <li><a class="navbar-link" id="logout" href="#">登出</a></li>
+                        </ul>
+                    </li>
+                    #else
+                    <li><p class="navbar-text"><a class="navbar-link"
+                                                  href="$request.getContextPath()/login/?next=$vtEscape.url($request.getServletPath())">登入</a></p>
+                    </li>
+                    <li><p class="navbar-text"><a class="navbar-link" href="$request.getContextPath()/account/register/">注册</a></p></li>
+                    #end
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        $!body_content
+        <br><br><br><br><br>
+    </div>
+</div>
+<div class="footer">
+    <p class="copyright">Rock framework, Copyright (c) 2015</p>
+</div>
+<div class="sys-alert-message alert hidden">
+    <b id="sys-alert-title"></b>
+    <span id="sys-alert-body"></span>
+</div>
+</body>
+<script src="$request.getContextPath()/static/js/jquery.1.11.0.min.js"></script>
+<script src="$request.getContextPath()/static/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="$request.getContextPath()/static/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Switch -->
+<script src="$request.getContextPath()/static/js/switch.min.js"></script>
+<!-- DatetimePicker -->
+<script src="$request.getContextPath()/static/js/datetimepicker.min.js"></script>
+<script src="$request.getContextPath()/static/js/dtpicker-locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="$request.getContextPath()/static/js/jquery-dateFormat.min.js"></script>
+<script src="$request.getContextPath()/static/js/rock.core.min.js"></script>
+<script>
+    $(function () {
+        $(".navbar-nav li[name|='link']").hover(function () {
+            $(this).addClass("active");
+        }, function () {
+            $(this).removeClass("active");
+        });
+    });
+</script>
+$!script
+</html>
