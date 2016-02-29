@@ -77,3 +77,15 @@ div.addJumbotronBg {
     padding:0 10px;
     text-decoration: underline;
 }
+.addWordCs p{
+    font-size:16px;
+    text-indent: 2em;
+    line-height: 28px;
+}
+.addWordCs h4{
+    font-weight:bold;
+    line-height: 2em;
+}
+.addblodCs{
+     font-weight:bold
+}
