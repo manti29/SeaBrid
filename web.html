@@ -17,24 +17,20 @@
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <!-- 本地最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="js/bootstrap.js"></script>
-        <!-- 登陆注册 -->
-        <script src="js/loginRegister.js" ></script>
         <script>
-            $(function(){
-                var promise=$.ajax({
-                    url:"data.php",
-                    dataType:"json",
-                    success:function(data,txtStatus){
-                       $.each(data, function(index,ele) {
-                           console.log(index+":"+ele);
-                       });
-                    },
-                    error:function(a,b,c){
-                        console.log(a.readyState+":"+b+":"+c)
-                    }
-                })
+            var promiser=$.ajax({
+            	type:"post",
+            	url:"data.php",
+            	async:true,
+            	dataType:"json",
+            	success:function(data){
+            	    console.info(data);
+            	}
+            });
+            promiser.done(function(data){
+                console.info(data);
             })
         </script>
     </body>
-    
+
 </html>
