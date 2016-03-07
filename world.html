@@ -13,13 +13,13 @@
         <div class="container addWordCs">
             <h4 class="text-center">借款合同</h4>
             <h4 class="text-right">编号：<span class="addSpanUnderLine">&nbsp;1000938475&nbsp;</span></h4>
-            <p class="addblodCs">甲    方：${company}</p>
+            <p class="addblodCs">甲    方：${owner}</p>
             <p class="addblodCs">住    所：${address}</p>
-            <p class="addblodCs">法定代表人：${person}</p>
+            <p class="addblodCs">法定代表人：${legalRepresentative}</p>
             <br/>
             <br/>
             <p class="addblodCs">乙    方： 国美小额贷款有限公司</p>
-            <p class="addblodCs">住    所：天津经济技术开发区第二大街57号MS   D-G1座315单元</p>
+            <p class="addblodCs">住    所：天津经济技术开发区第二大街57号MS&nbsp;&nbsp;D-G1座315单元</p>
             <p class="addblodCs">法定代表人： 黄秀虹</p>
             <br/>
             <p class="addblodCs">鉴于：</p>
@@ -35,8 +35,8 @@
             <p class="addblodCs">第二条 贷款基本信息</p>
             <p>
                 2.1贷款金额：<span class="addSpanUnderLine">&nbsp;${Amount}&nbsp;</span>元整(大写)，小写：<span class="addSpanUnderLine">&nbsp;￥${amount}&nbsp;</span> 元</p>
-            <p> 2.2贷款利率：<span class="addSpanUnderLine">&nbsp;${rate}&nbsp;</span></p>
-            <p> 2.3贷款期限以如下第${switch}方式为准，</p>
+            <p> 2.2贷款利率：<span class="addSpanUnderLine">&nbsp;${LoanRates}&nbsp;</span></p>
+            <p> 2.3贷款期限以如下第${items}方式为准，</p>
             <p> 1）三个月固定利率产品。</p>
             <p> 2）六个月固定利率产品。</p>
             <p> 3）180天随借随还产品；</p>
@@ -98,15 +98,15 @@
             <p>
                 6.1 乙方的专项汇款账户</p>
             <p> 本合同项下乙方指定下述账户作为放款及收款专户，用于本合同项下乙方放款和甲方还款：</p>
-            <p> 户名：国美小额贷款有限公司</p>
-            <p> 账号：4412 9010 0100 0629 54</p>
-            <p> 开户银行：兴业银行股份有限公司天津滨海新区分行</p>
-            <p> 联行号：<span class="addSpanUnderLine">&nbsp;&nbsp;</span></p>
+            <p> 户名：<span class="addSpanUnderLine">&nbsp;国美小额贷款有限公司&nbsp;</span></p>
+            <p> 账号：<span class="addSpanUnderLine">&nbsp;4412 9010 0100 0629 54&nbsp;</span></p>
+            <p> 开户银行：<span class="addSpanUnderLine">&nbsp;兴业银行股份有限公司天津滨海新区分行&nbsp;</span></p>
+            <p> 联行号：<span class="addSpanUnderLine">&nbsp;${lineNumber}&nbsp;</span></p>
             <p> 6.2甲方的接受本合同项下贷款金额的账户：</p>
-            <p> 户名：<span class="addSpanUnderLine">&nbsp;&nbsp;</span></p>
-            <p> 账号：<span class="addSpanUnderLine">&nbsp;&nbsp;</span></p>
-            <p> 开户银行：<span class="addSpanUnderLine">&nbsp;&nbsp;</span></p>
-            <p> 联行号：<span class="addSpanUnderLine">&nbsp;&nbsp;</span></p>
+            <p> 户名：<span class="addSpanUnderLine">&nbsp;${userCode}&nbsp;</span></p>
+            <p> 账号：<span class="addSpanUnderLine">&nbsp;${accountNumber}&nbsp;</span></p>
+            <p> 开户银行：<span class="addSpanUnderLine">&nbsp;${BankName}&nbsp;</span></p>
+            <p> 联行号：<span class="addSpanUnderLine">&nbsp;${BankLineNumber}&nbsp;</span></p>
 
             <p class="addblodCs">第七条 甲方的承诺与声明</p>
             <p>

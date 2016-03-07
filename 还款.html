@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>信云贷还款</title>
+        <!-- 本地 Bootstrap 核心 CSS 文件 -->
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/add.css" />
+    </head>
+
+    <body>
+        <!--　导航条　-->
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <span class="navbar-text">信云贷贷款</span>
+                </div>
+                <span class="navbar-text navbar-right">客服电话：400-600-8888</span>
+            </div>
+        </nav>
+        <!-- 路径区 -->
+        <div class="container">
+            <div class="row">
+                <ol class="breadcrumb">
+                    <li><a href="loan.html">首页</a></li>
+                    <li class="active">申请还款</li>
+                </ol>
+            </div>
+        </div>
+        <!-- 显示贷款例表区  -->
+        <div class="container">
+            <h4>创维有限公司</h4>
+        </div>
+        <div class="container">
+            <div class="row addRowCs">
+                <div class="col-sm-2 text-right">
+                    <span class="addSpanCs">未还总金额</span>
+                </div>
+                <div class="col-sm-3">
+                    <span id="countNum">￥100000.00元</span>
+                    <span class="label label-default">
+            <span class="glyphicon glyphicon-triangle-top"></span> 未还本金：10000.00 未还利息：500.00 未还罚息：0.00</span>
+                </div>
+            </div>
+            <div class="row addRowCs">
+                <div class="col-sm-2 text-right">
+                    <span class="addSpanCs">最低还款金额</span>
+                </div>
+                <div>
+                    <span id="countNum">￥500.00元</span>
+                </div>
+            </div>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="amountEntered" class="col-sm-2 control-label">申请贷款额度</label>
+                    <div class="col-sm-5">
+                        <div class="input-group">
+                            <label for="amountEntered" class="input-group-addon" id="basic-addon1">￥</label>
+                            <input type="text" id="amountEntered" class="form-control" placeholder="输入金额">
+                            <span class="input-group-addon">元</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-4">
+                        <button type="submit" id="submitBtn" type="button" class="btn btn-danger">确认还款</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- 本地jQuery文件。务必在bootstrap.min.js 之前引入 -->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <!-- 本地最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="js/bootstrap.js"></script>
+        <!-- 登陆注册 -->
+        <script src="js/loginRegister.js"></script>
+        <!-- -->
+        <script src="js/applyForLoan.js"></script>
+    </body>
+
+</html>

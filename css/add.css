@@ -3,7 +3,7 @@ body {
 }
 
 .addNewBg {
-    background: url(../images/bg.png) no-repeat top center;
+    background: url(../img/bg.png) no-repeat top center;
 }
 
 .addtabCs {
@@ -40,7 +40,7 @@ body {
 .addSwitchBg {
     border: 1px solid #C0392B;
     
-    background: url(../images/iconfont-zhengque.png) no-repeat bottom right;
+    background: url(../img/iconfont-zhengque.png) no-repeat bottom right;
     color: #c0392b;
     font-weight: bold;
 }
@@ -76,6 +76,12 @@ div.addJumbotronBg {
 .addSpanUnderLine{
     padding:0 10px;
     text-decoration: underline;
+}
+.addWordCs{
+    height:480px;
+    background-color:#FFFFFF;
+    overflow-y:auto;
+    margin:10px 0;
 }
 .addWordCs p{
     font-size:16px;
