@@ -1,0 +1,73 @@
+#set($page_title="信云贷") #define($body_content)
+<!-- 路径区 -->
+<div class="container">
+    <div class="row">
+        <span id="userCode" class="sr-only">$userCode</span>
+        <ol class="breadcrumb">
+            <li><a href="../../my_account/$!{userCode}">首页</a></li>
+            <li class="active">申请贷款</li>
+        </ol>
+    </div>
+</div>
+<!-- 显示贷款例表区  -->
+<div class="container addNewBg1">
+    <div class="row addRowCs">
+        <div class="col-sm-2 text-right">
+            <span class="addSpanCs">可贷额度</span>
+        </div>
+        <div class="col-sm-3">
+            <span id="countNum" class="text-danger addAmountCs">￥0.00元</span>
+        </div>
+    </div>
+    <div class="row addRowCs">
+        <div class="col-sm-2 text-right">
+            <span class="addSpanCs">贷款选项</span>
+        </div>
+        <div class="col-sm-9" id="loanBtnGroup">
+            
+        </div>
+    </div>
+    <form class="form-horizontal">
+        <div class="form-group form-group-lg">
+            <label for="amountEntered" class="col-sm-2 control-label">申请贷款额度</label>
+            <div class="col-sm-5">
+                <div class="input-group has-error">
+                    <label for="amountEntered" class="input-group-addon" id="basic-addon1">￥</label>
+                    <input type="text" id="amountEntered" class="form-control" placeholder="输入金额:">
+                    <span class="input-group-addon">元</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group form-group-lg">
+            <label class="col-sm-offset-2 col-sm-4">
+                <input type="checkbox" checked="true" id="checkoutBtn"> 同意签订
+                <a href="../../contract/contract_1/" target="_blank" class="addACs">《国美小贷借款合同》</a>
+            </label>
+        </div>
+        <div class="form-group form-group-lg">
+            <div class="col-sm-offset-2 col-sm-4">
+                <button type="button" id="submitBtn" type="button" class="btn btn-danger btn-lg">申请贷款金额</button>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- model -->
+<div class="modal fade" id="myModal" tabindex="-1" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body" id="myModalBody">
+                提示信息
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" id="modlCloseBtn" data-dismiss="modal">关闭</button>        
+      </div>
+    </div>
+  </div>
+</div>
+#end #define($script)
+<script src="$request.getContextPath()/static/js/apply_loan.js"></script>
+#end

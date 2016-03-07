@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
 	font-size:12px;
 	font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
@@ -18,4 +19,96 @@ body{
 }
 .addTabCs{
 	padding-top:15px;
+=======
+body {
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+
+.addNewBg {
+    background: url(../images/bg.png) no-repeat top center;
+}
+
+.addtabCs {
+    padding-top: 15px;
+}
+
+.addBtnCs {
+    margin: 14px 0px 0px 30px;
+}
+
+.addSpanCs {
+    font-weight: bold;
+}
+
+.addRowCs {
+    margin-bottom: 20px;
+}
+
+.addPCs {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    margin-right: 20px;
+    line-height: 3em;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #BDC3C7;
+}
+
+.addAmountCs {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.addSwitchBg {
+    border: 1px solid #C0392B;
+    
+    background: url(../images/iconfont-zhengque.png) no-repeat bottom right;
+    color: #c0392b;
+    font-weight: bold;
+}
+
+.addACs {
+    color: #3498DB
+}
+
+table.addTableCs tbody tr td {
+    vertical-align: middle;
+}
+
+table.addTableCs thead tr th {
+    text-align: center;
+}
+
+.addIframeCs {
+    border: 0;
+    width: 100%;
+    height: 530px;
+}
+
+div.addJumbotronBg {
+  background-color:rgba(255,255,255,.4); /* IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂，但解析为透明 */
+}
+.addNewBg1{
+  box-sizing: border-box;
+  background-color:#fffff;
+  padding:20px 10px;
+  border-radius:5px;
+  background-color:rgba(255,255,255,.8);
+}
+.addSpanUnderLine{
+    padding:0 10px;
+    text-decoration: underline;
+}
+.addWordCs p{
+    font-size:16px;
+    text-indent: 2em;
+    line-height: 28px;
+}
+.addWordCs h4{
+    font-weight:bold;
+    line-height: 2em;
+}
+.addblodCs{
+     font-weight:bold
+>>>>>>> refs/remotes/origin/master
 }

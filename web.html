@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>SeaBrid-HTML</title>
+        <!-- 本地 Bootstrap 核心 CSS 文件 -->
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/add.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Hello World Login Web!</h1>
+        </div>
+        <!-- 本地jQuery文件。务必在bootstrap.min.js 之前引入 -->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <!-- 本地最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="js/bootstrap.js"></script>
+        <script>
+            var promiser=$.ajax({
+            	type:"post",
+            	url:"data.php",
+            	async:true,
+            	dataType:"json",
+            	success:function(data){
+            	    console.info(data);
+            	}
+            });
+            promiser.done(function(data){
+                console.info(data);
+            })
+        </script>
+    </body>
+
+</html>
