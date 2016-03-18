@@ -1,0 +1,67 @@
+#set($page_title="信云贷") #define($body_content)
+<!-- 路径区 -->
+<div class="container">
+  <div class="row">
+    <span id="userCode" class="sr-only">$userCode</span>
+    <ol class="breadcrumb">
+      <li><a href="../../my_account/${userCode}/">首页</a></li>
+      <li class="active">申请贷款</li>
+    </ol>
+  </div>
+</div>
+<!-- 显示贷款例表区  -->
+<div class="container addNewBg1">
+  <form id="J_form" class="form-horizontal" method="post">
+    <div class="form-group form-group-lg">
+      <div class="col-sm-2 text-right">
+        <span class="addSpanCs">可贷额度</span>
+      </div>
+      <div class="col-sm-3">
+        <span id="amount" class="text-danger addAmountCs">￥0.00元</span>
+      </div>
+    </div>
+    <div class="form-group form-group-lg">
+      <div class="col-sm-2 text-right">
+        <span class="addSpanCs">贷款选项</span>
+      </div>
+      <!--贷款选项 -->
+      <div class="col-sm-9" id="loanBtnGroup"> </div>
+    </div>
+    <input id="l_userCode" name="userCode" type="hidden" value="">
+    <input id="l_prodSubCode" name="prodSubCode" type="hidden">
+    <input type="hidden" name="$_csrf.parameterName" value="$_csrf.token">
+    <div class="form-group form-group-lg">
+      <label for="loanAmt" class="col-sm-2 control-label">申请贷款额度</label>
+      <div class="col-sm-5">
+        <div class="input-group has-error">
+          <label for="loanAmt" class="input-group-addon" id="basic-addon1">￥</label>
+          <input type="text" id="loanAmt" name="loanAmt" class="form-control" placeholder="输入金额:">
+          <span class="input-group-addon">元</span>
+        </div>
+      </div>
+    </div>
+    <div class="row addRowCs">
+      <div class="col-sm-offset-2 col-sm-5">
+        <p class="text-muted text-center"><span class="glyphicon glyphicon-exclamation-sign"></span> 放款金额区间：5万-3000万</p>
+      </div>
+    </div>
+    <div class="form-group form-group-lg">
+      <div class="col-sm-offset-2 col-sm-4">
+        <button type="button" id="submitBtn" type="button" class="btn btn-danger btn-lg">下一步</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- model -->
+#set($m_id="myModal")
+#set($m_title="<p id=""myModalLabel"">Hello</p>")
+#set($m_body="<div id=""myModalBody"">Model Title</div>")
+#set($m_buttons="
+<button type=""button"" class=""btn btn-default"" id=""modlCloseBtn"" data-dismiss=""modal"">关闭</button>
+")
+#modal("m" $m_id $m_title $m_body $m_buttons)
+
+#end #define($script)
+<script src="$request.getContextPath()/static/js/apply_loan.js"></script>
+#end

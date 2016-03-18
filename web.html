@@ -1,36 +1,98 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-
-    <head>
-        <meta charset="utf-8" />
-        <title>SeaBrid-HTML</title>
-        <!-- 本地 Bootstrap 核心 CSS 文件 -->
-        <link rel="stylesheet" href="css/bootstrap.css" />
-        <link rel="stylesheet" href="css/add.css" />
-    </head>
-
-    <body>
-        <div class="container">
-            <h1>Hello World Login Web!</h1>
-        </div>
-        <!-- 本地jQuery文件。务必在bootstrap.min.js 之前引入 -->
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <!-- 本地最新的 Bootstrap 核心 JavaScript 文件 -->
-        <script src="js/bootstrap.js"></script>
-        <script>
-            var promiser=$.ajax({
-            	type:"post",
-            	url:"data.php",
-            	async:true,
-            	dataType:"json",
-            	success:function(data){
-            	    console.info(data);
-            	}
-            });
-            promiser.done(function(data){
-                console.info(data);
-            })
-        </script>
-    </body>
-
-</html>
+#set($page_title="信云贷") #define($body_content)
+<!-- 显示贷款例表区  -->
+<div class="addNewBg1">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" id="myTabs">
+    <li class="active"><a href="#apply" data-toggle="tab">审核中</a></li>
+    <li><a href="#pass" data-toggle="tab">已放款</a></li>
+    <li><a href="#nopass" data-toggle="tab">未通过</a></li>
+  </ul>
+  <!-- Tab panes -->
+  <div class="tab-content addTabBgCs">
+    <!-- 审核中-start -->
+    <div class="tab-pane active" id="apply">
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead class="addTheadCs">
+            <tr>
+              <th>序号</th>
+              <th>申请时间</th>
+              <th>合同编号</th>
+              <th>企业编号</th>
+              <th>企业全称</th>
+              <th>企业税号</th>
+              <th>申请金额</th>
+              <th>贷款期限</th>
+              <th>贷款方式</th>
+              <th>利率</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody> </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- 审核中-end -->
+    <!-- 已放款-start -->
+    <div class="tab-pane" id="pass">
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>申请时间</th>
+              <th>放款时间</th>
+              <th>合同编号</th>
+              <th>企业编号</th>
+              <th>企业全称</th>
+              <th>企业税号</th>
+              <th>申请金额</th>
+              <th>贷款期限</th>
+              <th>贷款方式</th>
+              <th>利率</th>
+              <th>到期日期</th>
+              <th>贷款状态</th>
+            </tr>
+          </thead>
+          <tbody> </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- 已放款-end -->
+    <!-- 未通过-start -->
+    <div class="tab-pane" id="nopass">
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>申请时间</th>
+              <th>未通过时间</th>
+              <th>合同编号</th>
+              <th>企业编号</th>
+              <th>企业全称</th>
+              <th>企业税号</th>
+              <th>贷款金额</th>
+              <th>贷款期限</th>
+              <th>贷款方式</th>
+              <th>利率</th>
+              <th>原因</th>
+            </tr>
+          </thead>
+          <tbody> </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- 未通过-end -->
+  </div>
+</div>
+<!-- model -->
+#set($m_id="myModal") #set($m_title="
+<p id=""myModalLabel"">Hello</p>
+") #set($m_body="
+<div id=""myModalBody"">Model Title</div>
+") #set($m_buttons="
+<button type=""button""class=""btn btn-default"" id=""modlCloseBtn"" data-dismiss=""modal"">关闭</button>
+") #modal("m" $m_id $m_title $m_body $m_buttons) #end #define($script)
+<script src="$request.getContextPath()/static/js/loan_approval.js"></script>
+#end

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>确认放款</title>
+    <!-- 本地 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/add.css" />
+  </head>
+
+  <body>
+    <!--　导航条　-->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <span class="navbar-text">信云贷贷款</span>
+        </div>
+        <span class="navbar-text navbar-right">客服电话：400-600-8888</span>
+      </div>
+    </nav>
+    <!-- 路径区 -->
+    <div class="container">
+      <div class="jumbotron addJumbotronBg">
+        <div class="row">
+          <span id="userCode" class="sr-only">$userCode</span>
+          <h4 id="cropName">企业名称</h4>
+        </div>
+        <div class="row">
+          <h2 class="addH1Cs pull-left text-danger" id="amount">额度计算中...</h2>
+          <a class="btn btn-danger btn-lg addBtnCs pull-left" id="applyBtn" href="javascript:void(0)">立即申请</a>
+        </div>
+      </div>
+    </div>
+    <!-- 授信质押合同  -->
+    <div class="container">
+      <div class="panel panel-warning">
+        <div class="panel-heading">授信质押合同</div>
+        <div class="panel-body table-responsive">
+          <table class="table table-striped table-hover">
+            <thead class="addTableTltle">
+              <tr>
+                <th>合同类型</th>
+                <th>开始日期</th>
+                <th>结束日期</th>
+                <th>合同编号</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="contractList">
+                <tr>
+                  <td align="center">授信合同</td>
+                  <td align="center">2016-3-4</td>
+                  <td align="center">2017-3-4</td>
+                  <td align="center">SX2016100000000</td>
+                  <td align="center"><a href="#" class="btn btn-sm btn-info">下载</a></td>
+                </tr>
+                <tr>
+                  <td align="center">质押合同</td>
+                  <td align="center">2016-3-4</td>
+                  <td align="center">2017-3-4</td>
+                  <td align="center">ZY2016100000000</td>
+                  <td align="center"><a href="#" class="btn btn-sm btn-info">下载</a></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- 显示贷款  -->
+    <div class="container">
+      <div class="panel panel-danger">
+        <div class="panel-heading">贷款记录</div>
+        <div class="panel-body table-responsive" id="listTableId">
+          <table class="table table-striped table-hover addTableCs">
+            <thead>
+              <tr>
+                <th>申请日期</th>
+                <th>合同编号</th>
+                <th>贷款金额</th>
+                <th>贷款期限</th>
+                <th>贷款方式</th>
+                <th>利率(年化)</th>
+                <th>贷款状态</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- 本地jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- 本地最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="js/bootstrap.js"></script>
+  </body>
+
+</html>
